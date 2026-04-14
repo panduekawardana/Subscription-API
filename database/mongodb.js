@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import {DB_URI, NODE_ENV} from "../config/env.js";
+import {NODE_ENV} from "../config/env.js";
 
 if(!DB_URI) {
   throw new Error('Please check your DB URI .env.<development/production>.local');
