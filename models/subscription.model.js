@@ -7,6 +7,8 @@ export const SUBSCRIPTION_TABLE_SCHEMA = `
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     user_id UUID NOT NULL REFERENCES ${USER_TABLE_NAME}(id) ON DELETE CASCADE,
     name VARCHAR(120) NOT NULL,
+    category VARCHAR(30) NOT NULL DEFAULT 'entertainment'
+      CHECK (category IN ('entertainment', 'music', 'productivity', 'education', 'other')),
     price NUMERIC(12, 2) NOT NULL CHECK (price >= 0),
     currency CHAR(3) NOT NULL DEFAULT 'IDR',
     status VARCHAR(20) NOT NULL DEFAULT 'active' CHECK (status IN ('active', 'cancelled', 'expired')),
@@ -26,6 +28,7 @@ export function mapSubscriptionRow(row) {
     id: row.id,
     userId: row.user_id,
     name: row.name,
+    category: row.category,
     price: Number(row.price),
     currency: row.currency,
     status: row.status,
