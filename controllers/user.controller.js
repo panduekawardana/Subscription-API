@@ -12,13 +12,13 @@ export const getUsers = async (req, res, next) => {
 
     const users = usersResult.rows.map((u) => ({
       id: u.id,
-      fullName: u.full_name,
-      email: u.email,
-      token: u.token,
-
-      // Nota: jangan pernah mengirim password_hash ke client.
-      createdAt: u.created_at,
-      updatedAt: u.updated_at,
+      data: {
+        fullName: u.full_name,
+        email: u.email,
+        password: u.password,
+        createdAt: u.created_at,
+        updatedAt: u.updated_at,
+      },
     }));
 
     res.status(200).json({
@@ -53,10 +53,12 @@ export const getUser = async (req, res, next) => {
     const u = userResult.rows[0];
     const user = {
       id: u.id,
-      fullName: u.full_name,
-      email: u.email,
-      createdAt: u.created_at,
-      updatedAt: u.updated_at,
+      data: {
+        fullName: u.full_name,
+        email: u.email,
+        createdAt: u.created_at,
+        updatedAt: u.updated_at,
+      },
     };
 
     res.status(200).json({
