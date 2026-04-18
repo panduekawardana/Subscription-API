@@ -76,6 +76,7 @@ export const signUp = async (req, res, next) => {
       success: true,
       message: 'Sign up successful',
       data: {
+        token: token,
         user: {
           id: user.id,
           fullName: user.full_name,
@@ -135,6 +136,7 @@ export const signIn = async (req, res, next) => {
       success: true,
       message: 'Sign in successful',
       data: {
+        token: token,
         user: {
           id: user.id,
           fullName: user.full_name,

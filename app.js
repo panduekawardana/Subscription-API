@@ -17,7 +17,7 @@ app.use(cookieParser());
 
 app.use('/api/v1/users', userRoute);
 app.use('/api/v1/auth', authRoute);
-app.use('/api/v1/subscription', subscriptionRoute);
+app.use('/api/v1/subscriptions', subscriptionRoute);
 app.use(errorMiddleware)
 
 app.get('/', (req, res) => {

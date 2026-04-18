@@ -1,3 +1,4 @@
+import { token } from 'morgan';
 import {query} from '../database/postgresql.js';
 
 export const getUsers = async (req, res, next) => {
@@ -53,6 +54,7 @@ export const getUser = async (req, res, next) => {
     const u = userResult.rows[0];
     const user = {
       id: u.id,
+      token: u.token,
       data: {
         fullName: u.full_name,
         email: u.email,
