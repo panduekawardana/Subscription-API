@@ -47,6 +47,7 @@ export const getSubscriptions = async(req, res, next) => {
                 price: s.price,
                 currency: s.currency,
                 category: s.category,
+                status: s.status,
                 startDate: s.start_date,
                 renewalDate: s.renewal_date,
             }
@@ -94,11 +95,6 @@ export const getUserSubscription = async(req, res, next) => {
     try {
         const {id} = req.params;
 
-        // --- DEBUGGING ---
-        console.log("ID dari Token JWT (req.user.id) :", req.user.id);
-        console.log("ID dari URL Postman (req.params.id) :", id);
-        // -----------------
-
         if(req.user.id !== id){
             const error = new Error('You are not authorize to view these subscriptions');
             error.statusCode = 403;
@@ -110,12 +106,18 @@ export const getUserSubscription = async(req, res, next) => {
         const formatSubscriptions = userSubscription.rows.map(s => ({
             id: s.id,
             data: {
+                id: s.user_id,
                 name: s.name,
                 price: s.price,
                 currency: s.currency,
                 category: s.category,
                 startDate: s.start_date,
-                renewalDate: s.renewal_date
+                renewalDate: s.renewal_date,
+                status: {
+                    status: s.status,
+                },
+                created_at: s.created_at,
+                updated_at: s.updated_at
             }
         }));
 

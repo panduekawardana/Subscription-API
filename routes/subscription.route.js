@@ -12,7 +12,7 @@ import { getUser } from '../controllers/user.controller.js';
 
 const subscriptionRoute = Router();
 
-subscriptionRoute.get('/', authorize, getSubscriptions);
+subscriptionRoute.get('/', getSubscriptions);
 
 subscriptionRoute.get('/:id', authorize, getSubscription);
 
