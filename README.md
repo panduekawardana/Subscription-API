@@ -1,4 +1,4 @@
-![Banner](/images/banner.png)
+<img width="1800" height="520" alt="Image" src="https://github.com/user-attachments/assets/9a8b30a0-f6af-4656-9039-da02d9108927" />
 
 <h4 align="center">Subscription Management System API</h4>
 <P align="center">Membuat sistem subscription api dengan menggunakan javascript dari konfigurasi awal hingga pengujian autentikasi, error handling, dan rate limit request dengan arcjet.</P>
@@ -70,4 +70,4 @@ ARCJET_ENV="development"
 Belum bisa mengirimkan email subscription menggunakan `upstash` atau tools lainnya karena belum diterapkan🤸‍♂️.
 </br>
 
-![Footer Banner](/images/footer-banner.png)
+<img width="1800" height="520" alt="Image" src="https://github.com/user-attachments/assets/82899bf6-bd8b-4a4c-b8bb-50d6c5f54f40" />
