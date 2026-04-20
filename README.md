@@ -1,6 +1,6 @@
 <img width="1800" height="520" alt="Image" src="https://github.com/user-attachments/assets/9a8b30a0-f6af-4656-9039-da02d9108927" />
 
-<h4 align="center">Subscription Management System API</h4>
+<h2 align="center">Subscription Management System API</h2>
 <P align="center">Membuat sistem subscription api dengan menggunakan javascript dari konfigurasi awal hingga pengujian autentikasi, error handling, dan rate limit request dengan arcjet.</P>
 
 #### Implementasi ⚙️
@@ -13,10 +13,14 @@
  
  ### Fitur 🔋
 
- 👉 Pembatasan Laju dan Perlindungan Bot Tingkat Lanjut: dengan Arcjet yang membantu Anda mengamankan seluruh aplikasi.
+👉 Pembatasan Laju dan Perlindungan Bot Tingkat Lanjut: dengan Arcjet yang membantu Anda mengamankan seluruh aplikasi.
+
 👉 Pemodelan Basis Data: Model dan relasi menggunakan PostgreSQL.
+
 👉 Otentikasi JWT: Operasi CRUD pengguna dan manajemen langganan.
+
 👉 Penanganan Kesalahan Global: Validasi input dan integrasi middleware.
+
 👉 Mekanisme Pencatatan: Untuk debugging dan pemantauan yang lebih baik.
 
 ### Quick Start🤸‍♂️
